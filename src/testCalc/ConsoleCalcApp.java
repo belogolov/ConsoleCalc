@@ -1,6 +1,5 @@
 package testCalc;
 
-import java.sql.PreparedStatement;
 import java.util.Scanner;
 
 public class ConsoleCalcApp {
@@ -8,7 +7,7 @@ public class ConsoleCalcApp {
     public static void main(String[] args) {
         System.out.println("Калькулятор выполняет операции вида \"a\" + \"b\", \"a\" - \"b\", \"a\" * b, \"a\" / b со строками и целыми числами из интервала [1; 10].");
         ConsoleCalc calc = new ConsoleCalc();
-        String outputString = "";
+        String outputString;
         String inputString;
         int indexOfOperation;
         String aStr;
@@ -22,10 +21,8 @@ public class ConsoleCalcApp {
             System.out.print("Output: ");
             if (indexOfOperation == -1) {
                 System.out.println("Действие не определено");
-                continue;
             } else if (indexOfOperation < 2) {
                 System.out.println("Первая строка не определена");
-                continue;
             } else {
                 aStr = inputString.substring(0, indexOfOperation);
                 while (aStr.endsWith(" ")) {
@@ -72,7 +69,7 @@ public class ConsoleCalcApp {
     }
 
     private static int getIndexOfOperation(String str) {
-        int index = -1;
+        int index;
         index = str.indexOf("+");
         if (index == -1) {
             index = str.indexOf("-");

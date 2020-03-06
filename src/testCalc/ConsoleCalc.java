@@ -11,12 +11,6 @@ class ConsoleCalc implements Calculator {
         result = a;
     }
 
-    private String removeQ(String s) {
-        if (s.charAt(0) == '"' && s.charAt(s.length() - 1) == '"') {
-            return s.substring(1, s.length() - 1);
-        }
-        return s;
-    }
 
     @Override
     public String plus(String b) {
@@ -110,6 +104,14 @@ class ConsoleCalc implements Calculator {
         sb.append("\"");
         result = sb.toString();
         return result;
+    }
+
+
+    private String removeQ(String s) {
+        if (s.charAt(0) == '"' && s.charAt(s.length() - 1) == '"') {
+            return s.substring(1, s.length() - 1);
+        }
+        return s;
     }
 
     private boolean isCorrectString(String s, String title) {
