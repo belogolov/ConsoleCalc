@@ -80,6 +80,9 @@ class Calculator {
         return expressions;
     }
 
+    //применяем операцию operation к строкам strA и strB
+    //strA - всегда строка, заключенная в кавычки
+    //strA - строка, заключенная в кавычки либо число (зависит от операции)
     private String calculate(String strA, String operation, String strB) {
         String result = "";
         Controller controller = new Controller();

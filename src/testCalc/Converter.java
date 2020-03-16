@@ -1,7 +1,8 @@
 package testCalc;
 
+
+//вспомогательный класс для преобразований и проверок корректности
 class Converter {
-    //private String
 
     static int convertToInt(String s) {
         int out;

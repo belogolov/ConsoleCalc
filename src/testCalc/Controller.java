@@ -1,5 +1,6 @@
 package testCalc;
 
+//реализация действий определенных для калькулятора
 class Controller implements Actions {
     private String result;
 
